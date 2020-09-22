@@ -1,0 +1,25 @@
+precisa ter um servi�o de tarefas onde ter� a lista de tarefas,
+com metodos de remo��o e adic�o de tarefa
+
+instalar bootstrap
+
+: npm i bootstrap
+
+instalar cdk
+
+: npm i @angular/cdk
+
+
+cd /d/LeandroPires/Pessoais/Estudos/Angular/codigos/projeto/listaDeEventos
+
+git init
+git add .
+git commit -m "Aula 3 - Lista de Eventos"
+git branch -M master
+git remote add origin https://github.com/leandrospires/angularListaEvento.git
+git push -u origin master
+
+Forcar Baixar
+git fetch --all
+git reset --hard origin/master
+git pull origin master
