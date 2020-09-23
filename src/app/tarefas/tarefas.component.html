@@ -1,1 +1,27 @@
-<p>tarefas works!</p>
+<div class="container">
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="listaDeTarefas"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let tarefa of listaDeTarefas" cdkDrag>{{tarefa.task}}</div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Done</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="listaDeTarefasDone"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let tarefa of listaDeTarefasDone" cdkDrag>{{tarefa.task}}</div>
+      </div>
+    </div>
+  </div>
+</div>

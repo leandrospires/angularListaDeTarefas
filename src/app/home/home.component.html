@@ -1,0 +1,49 @@
+<div class="container">
+  
+    <form (ngSubmit)="submit()" [formGroup]="postForm" >
+      <div class="form-group">
+        <label for="exampleInputTarefa">Tarefa</label>
+        <input type="text" 
+          class="form-control"
+          id="exampleInputTarefa" 
+          aria-describedby="TarefaHelp"
+          placeholder="Digite a tarefa"
+          formControlName="task" />
+          <p class="error" *ngIf="postForm.get('task').errors?.required">
+            Campo obrigatório!</p>
+        </div>
+      <div class="form-group">
+        <label for="exampleInputData">Data de início</label>
+        <input type="text" 
+          class="form-control"
+          id="exampleInputData" 
+          aria-describedby="DataHelp"
+          placeholder="Início"
+          formControlName="date">
+          <p class="error" *ngIf="postForm.get('date').errors?.required">
+            Data obrigatória!</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+
+    </form>
+    
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>  </th>
+            <th scope="col">#</th>
+            <th scope="col">Tarefa</th>
+            <th scope="col">Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarefa of listaDeTarefas; let posicao = index"> 
+            <th> <button (click)="removerTarefa(posicao)"> Remover </button> </th>
+            <th scope="row">{{posicao}}</th>
+            <td> {{tarefa.task}} </td>
+            <td> {{tarefa.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
