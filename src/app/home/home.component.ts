@@ -17,8 +17,9 @@ export class HomeComponent implements OnInit {
   listaDeTarefas: any[] =[];
 
   postForm: FormGroup=new FormGroup({
-    task: new FormControl("digita uma nova tarefa", [Validators.required]),
-    date: new FormControl("20/10/2020", [Validators.required])
+    task: new FormControl("", [Validators.required]),
+    date: new FormControl("", [Validators.required]),
+    contato: new FormControl("", [Validators.required])
   })
 
   constructor(private listaService: ServiceService) { }

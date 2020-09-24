@@ -9,6 +9,22 @@ instalar cdk
 
 : npm i @angular/cdk
 
+criar pipe
+
+: ng g p nome_pipe
+
+criar diretiva
+
+: ng g d nome_diretiva
+
+criar rota
+
+: ng g m about --routing
+
+criar novo componente com dependencia
+
+:ng g c about --module=about --flat
+
 
 cd /d/LeandroPires/Pessoais/Estudos/Angular/codigos/projeto/listaDeTarefas
 

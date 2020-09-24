@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 export class ServiceService {
 
   private _listaDeTarefas = [
-    {"task":"Criar Formulário", "date": '20/09/2020'},
-    {"task":"Listar tarefas", "date": '21/09/2020'},
-    {"task":"Incluir tarefa", "date": '22/09/2020'},
-    {"task":"Remover tarefa", "date": '23/09/2020'}
+    {"task":"Criar Formulário", "date": '20082020', "contato": "11988881111"},
+    {"task":"Listar tarefas", "date": '21092021', "contato": "11988882222"},
+    {"task":"Incluir tarefa", "date": '22102022', "contato": "11988883333"},
+    {"task":"Remover tarefa", "date": '23112023', "contato": "11988884444"}
   ];
 
   constructor() { }

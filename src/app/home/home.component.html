@@ -11,17 +11,32 @@
           formControlName="task" />
           <p class="error" *ngIf="postForm.get('task').errors?.required">
             Campo obrigatório!</p>
-        </div>
+      </div>
+
       <div class="form-group">
         <label for="exampleInputData">Data de início</label>
         <input type="text" 
           class="form-control"
           id="exampleInputData" 
           aria-describedby="DataHelp"
-          placeholder="Início"
-          formControlName="date">
+          placeholder="Data"
+          formControlName="date"
+          appData>
           <p class="error" *ngIf="postForm.get('date').errors?.required">
             Data obrigatória!</p>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputData">Contato</label>
+        <input type="text" 
+          class="form-control"
+          id="exampleInputContato" 
+          aria-describedby="DataHelp"
+          placeholder="Contato"
+          formControlName="contato"
+          appTelefone>
+          <p class="error" *ngIf="postForm.get('contato').errors?.required">
+            Contato obrigatória!</p>
       </div>
 
       <button type="submit" class="btn btn-primary">Adicionar</button>
@@ -35,6 +50,7 @@
             <th scope="col">#</th>
             <th scope="col">Tarefa</th>
             <th scope="col">Data</th>
+            <th scope="col">Contato</th>
           </tr>
         </thead>
         <tbody>
@@ -42,7 +58,8 @@
             <th> <button (click)="removerTarefa(posicao)"> Remover </button> </th>
             <th scope="row">{{posicao}}</th>
             <td> {{tarefa.task}} </td>
-            <td> {{tarefa.date}}</td>
+            <td> {{tarefa.date | data}}</td>
+            <td> {{tarefa.contato | contato}} </td>
           </tr>
         </tbody>
       </table>

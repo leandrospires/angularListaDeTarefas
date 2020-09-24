@@ -8,14 +8,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { NotFoundComponent } from './not-found/not-found.component'
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ContatoPipe } from './contato.pipe';
+import { TelefoneDirective } from './telefone.directive';
+import { DataPipe } from './data.pipe';
+import { DataDirective } from './data.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     TarefasComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ContatoPipe,
+    TelefoneDirective,
+    DataPipe,
+    DataDirective
   ],
   imports: [
     BrowserModule,
