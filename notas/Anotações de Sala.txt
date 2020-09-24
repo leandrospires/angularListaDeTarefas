@@ -28,6 +28,9 @@ criar novo componente com dependencia
 
 cd /d/LeandroPires/Pessoais/Estudos/Angular/codigos/projeto/listaDeTarefas
 
+cd /E/LeandroPires/Angular/codigo/listaDeTarefas/angularListaDeTarefas/
+
+
 git init
 git add .
 git commit -m ""
